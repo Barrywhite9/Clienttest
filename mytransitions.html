@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>My Transitions</title>
+		<style type="text/css">
+		div
+		{
+		padding: 40px;
+		width: 400px;
+		font-family: sans-serif;
+		font-size: xx-large;
+		text-align: center;
+
+		border:2px solid black;
+		
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+
+		transition:1s, ease-in-out;
+
+		}
+
+
+		#linear{
+			background: linear-gradient(left, red, orange, yellow, green, blue);
+			background: -webkit-linear-gradient(left, red, orange, yellow, green, blue);
+			background: -moz-linear-gradient(left, red, orange, yellow, green, blue);
+			background: -o-linear-gradient(left, red, orange, yellow, green, blue);
+
+		}
+
+
+		#diagonal{
+			background: linear-gradient(45deg, #000000, #ffffff);
+			background: -webkit-linear-gradient(45deg, #000000, #ffffff);
+			background: -moz-linear-gradient(45deg, #000000, #ffffff);
+			background: -o-linear-gradient(45deg, #000000, #ffffff);
+
+
+		}
+
+		#radial{
+			background: radial-gradient(center, rgba(255,0,102,0.5), rgba(204,204,0,1));
+			background: -webkit-radial-gradient(center, rgba(255,0,102,0.5), rgba(204,204,0,1));
+			background: -moz-radial-gradient(center, rgba(255,0,102,0.5), rgba(204,204,0,1));
+			background: -o-radial-gradient(center, rgba(255,0,102,0.5), rgba(204,204,0,1));
+
+
+		}
+
+		#repeating{
+			background: repeating-linear-gradient(top, red, green 10%, blue 20%);
+			background: -webkit-repeating-linear-gradient(top, red, green 10%, blue 20%);
+			background: -moz-repeating-linear-gradient(top, red, green 10%, blue 20%);
+			background: -o-repeating-linear-gradient(top, red, green 10%, blue 20%);
+		}
+
+		#repeating2{
+			background: repeating-linear-gradient(left, chartreuse, white 10%, purple 20%);
+			background: -webkit-repeating-linear-gradient(left, chartreuse, white 10%, purple 20%);
+			background: -moz-repeating-linear-gradient(left, chartreuse, white 10%, purple 20%);
+			background: -o-repeating-linear-gradient(left, chartreuse, white 10%, purple 20%);
+		}
+
+		.rotate:hover{
+			-webkit-transform: rotate(-45deg);
+			-webkit-transition:all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+			-moz-transform: rotate(-45deg);
+			-moz-transition:all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+			background: -moz-linear-gradient(left, red, orange, yellow, green, blue);
+
+			
+		}
+
+		.scale:hover{
+			-webkit-transform: scale(2,2);
+			-webkit-transition:all 900ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+			-moz-transform: scale(2,2);
+			-moz-transition:all 900ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		}
+
+		.translate:hover{
+			-webkit-transform: translate(500px, 400px);
+			-webkit-transition:all 1.5s cubic-bezier(1, 0, 0, 1);
+			-moz-transform: translate(500px, 400px);
+			-moz-transition:all 1.5s cubic-bezier(1, 0, 0, 1);
+		}
+
+		.skew:hover{
+			-webkit-transform: skew(20deg, 20deg);
+			-webkit-transition:all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			-moz-transform: skew(20deg, 20deg);
+			-moz-transition:all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+
+
+
+		</style>
+	</head>
+	<body>
+		<div id="linear">Original</div>
+		<div id="diagonal" class="rotate">Rotate</div>
+		<div id="radial" class="scale">Scale</div>
+		<div id="radial" class="scale">Scale</div>
+		<div id="repeating" class="translate">Translate</div>
+		<div id="repeating2" class="skew">Skew</div>
+
+	</body>
+</html>
